@@ -1,0 +1,126 @@
+/* Defines keeps the navBar at the center*/
+.navBaeSizeLimiter {
+  display: flex;
+  justify-content: center;
+  min-height: 60px;
+  width: 100%;
+}
+/* Defining the nav bar color*/
+.navBar {
+  background-color: #151515;
+}
+/* Defining the nav bar's structure*/
+.navBar {
+  min-height: 60px;
+  position: fixed;
+  width: 1440px;
+  z-index: 99;
+}
+/* Defining the nav bar's in structure(In element's)*/
+.navBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*center positioning for the log*/
+.log {
+  margin: auto 1.5em;
+}
+
+/*Placing the child elements side by side*/
+.navContainer {
+  display: flex;
+  margin: 0 1.5em;
+}
+
+.cart {
+  display: flex;
+  margin: auto 1em;
+}
+
+.counter {
+  margin: -2px auto;
+  min-height: 5px;
+}
+
+.counter span {
+  border-radius: 20px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-size: 12px;
+  padding: 5px 9px;
+}
+
+.signInBtn {
+  margin: auto;
+}
+/*Btn design*/
+.signInBtn .btn {
+  border: white solid 1.5px;
+  background-color: rgba(123, 44, 0, 0.6);
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  font-family: "Jacques Francois";
+}
+
+.signInBtn .btn {
+  padding: 8px 40px;
+}
+
+@media only screen and (max-width: 1440px) {
+  .navBar {
+    width: 100%;
+  }
+}
+/*Reducing the size of nav bar elements for reponsiveness*/
+@media only screen and (max-width: 1000px) {
+  .log img {
+    width: 110px;
+  }
+
+  .cart img {
+    width: 35px;
+  }
+
+  .counter span {
+    font-size: 11px;
+    padding: 3px 7px;
+  }
+
+  .signInBtn .btn {
+    font-size: 12px;
+    padding: 8px 35px;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .navBaeSizeLimiter {
+    min-height: 45px;
+  }
+  .navBar {
+    min-height: 45px;
+  }
+  .log {
+    margin: 0.5em;
+  }
+  .log img {
+    width: 90px;
+  }
+  .navContainer {
+    margin: 0 0.5em;
+  }
+  .cart img {
+    width: 28px;
+  }
+
+  .counter span {
+    font-size: 9px;
+    padding: 2px 5px;
+  }
+
+  .signInBtn .btn {
+    font-size: 10px;
+    padding: 6px 25px;
+  }
+}

@@ -1,0 +1,252 @@
+.centerSingIn {
+  margin-top: 8em;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.singIn {
+  width: 1440px;
+
+  .signInTittle {
+    text-align: center;
+    font-family: "JejuMyeongjo";
+    font-size: 64px;
+    text-decoration: underline;
+    margin: 0.5em 0;
+  }
+
+  .signInFields {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    form {
+      margin-top: 5em;
+      width: 50%;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 45px;
+        p {
+          font-size: 28px;
+          font-family: "JejuMyeongjo";
+          font-weight: 100;
+          text-align: center;
+          margin: auto 2px;
+        }
+        input {
+          background-color: black;
+          border: 1px solid #924600;
+          color: aliceblue;
+          font-size: 20px;
+          height: 32px;
+          width: 300px;
+          margin: auto 2px;
+        }
+      }
+    }
+  }
+  .signInBtn {
+    margin-top: 1em;
+    text-align: right;
+
+    button {
+      border: 1px solid #924600;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 6px;
+      color: white;
+      font-size: 24px;
+      font-family: "Jacques Francois";
+      padding: 5px 40px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .singIn {
+    width: 100%;
+
+    .signInTittle {
+      font-size: 60px;
+    }
+
+    .signInFields {
+      form {
+        margin-top: 5em;
+
+        div {
+          margin-bottom: 45px;
+          p {
+            font-size: 28px;
+          }
+          input {
+            font-size: 20px;
+            height: 32px;
+            width: 300px;
+          }
+        }
+      }
+    }
+    .signInBtn {
+      margin: 1em 1em;
+      width: 95%;
+
+      button {
+        font-size: 24px;
+        padding: 5px 40px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  .singIn {
+    .signInTittle {
+      font-size: 45px;
+    }
+
+    .signInFields {
+      form {
+        margin-top: 3em;
+        width: 60%;
+        div {
+          margin-bottom: 40px;
+          p {
+            font-size: 22px;
+          }
+          input {
+            font-size: 18px;
+            height: 30px;
+            width: 250px;
+          }
+        }
+      }
+    }
+    .signInBtn {
+      button {
+        font-size: 20px;
+        padding: 4px 35px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 930px) {
+  .singIn {
+    .signInTittle {
+      font-size: 45px;
+    }
+  }
+}
+@media only screen and (max-width: 850px) {
+  .singIn {
+    .signInTittle {
+      font-size: 42px;
+    }
+
+    .signInFields {
+      form {
+        margin-top: 5em;
+        width: 70%;
+        div {
+          margin-bottom: 40px;
+          p {
+            font-size: 18px;
+          }
+          input {
+            font-size: 15px;
+            height: 30px;
+            width: 180px;
+          }
+        }
+      }
+    }
+    .signInBtn {
+      button {
+        font-size: 20px;
+        padding: 4px 35px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .singIn {
+    .signInTittle {
+      font-size: 40px;
+    }
+
+    .signInFields {
+      form {
+        margin-top: 3em;
+        margin-bottom: 3em;
+        width: 80%;
+        div {
+          margin-bottom: 40px;
+          p {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+    .signInBtn {
+      text-align: center;
+      button {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .singIn {
+    .signInTittle {
+      font-size: 37px;
+    }
+
+    .signInFields {
+      form {
+        margin-top: 2em;
+        margin-bottom: 1.5em;
+        width: 90%;
+        div {
+          margin-bottom: 40px;
+          input {
+            font-size: 14px;
+            height: 23px;
+            width: 150px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .singIn {
+    .signInTittle {
+      font-size: 30px;
+    }
+
+    .signInFields {
+      form {
+        div {
+          p {
+            font-size: 12px;
+          }
+          input {
+            font-size: 12px;
+            height: 20px;
+            width: 120px;
+          }
+        }
+      }
+    }
+
+    .signInBtn {
+      button {
+        font-size: 17px;
+      }
+    }
+  }
+}

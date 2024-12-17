@@ -1,0 +1,15 @@
+.centerProductPage {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.productPage {
+  width: 1440px;
+}
+
+.theProduct {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}

@@ -1,0 +1,32 @@
+import React from "react";
+import "../App.css";
+import HeroSection from "./HeroSection";
+import MealMenu from "./MealMenu";
+import NavBar from "./NavBar";
+import SecondBanner from "./SecondBanner";
+import SnackMenu from "./SnackMenu";
+import FoodItems from "./FoodItems";
+
+interface Menus {
+  mealMenuList: FoodItems[];
+  dessertItems: FoodItems[];
+  setVariables: (tempId: number, tempType: string) => void;
+}
+
+const HomePage: React.FC<Menus> = ({
+  mealMenuList,
+  dessertItems,
+  setVariables,
+}) => {
+  return (
+    <>
+      <NavBar />
+      <HeroSection />
+      <MealMenu mealMenuList={mealMenuList} setVariables={setVariables} />
+      <SecondBanner />
+      <SnackMenu snackMenuList={dessertItems} setVariables={setVariables} />
+    </>
+  );
+};
+
+export default HomePage;

@@ -1,0 +1,377 @@
+.productStage {
+  display: flex;
+  justify-content: center;
+  margin: 3.1em 0 0 0;
+  width: 1440px;
+
+  .innerStructure {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #924600;
+    border-radius: 10px;
+    box-shadow: 0 0 60px #92470052;
+    display: flex;
+    width: 95%;
+
+    .productImg {
+      text-align: center;
+      width: 50%;
+
+      img {
+        border: 10px solid black;
+        box-shadow: 0 0 20px #924700c0;
+        margin: 4em 0;
+        width: 250px;
+      }
+    }
+
+    .productShopDetails {
+      text-align: center;
+      width: 50%;
+
+      .productName {
+        display: flex;
+        justify-content: center;
+        margin: 70px 2em 0 2em;
+        h2 {
+          font-size: 38px;
+          font-family: "Jacques Francois";
+          font-weight: 100;
+          text-decoration: underline;
+          margin: 0%;
+          width: 95%;
+        }
+      }
+
+      .productDescription {
+        display: flex;
+        justify-content: center;
+        margin: 40px 0 0 0;
+        width: 100%;
+        h4 {
+          font-size: 20px;
+          font-family: "Jacques Francois";
+          font-weight: 100;
+          width: 80%;
+        }
+      }
+
+      .productFunctions {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+
+        .priceAndQuatity {
+          .quatity {
+            margin: 40px 0 0 0;
+            display: flex;
+            p {
+              font-size: 20px;
+              font-family: "Jacques Francois";
+              margin: 10px 0.5em 10px 0.5rem;
+            }
+
+            input {
+              border: 2px solid black;
+              background-color: rgba(255, 228, 196, 0);
+              color: #ffffff;
+              height: 20px;
+              margin: 10px 0;
+              width: 40px;
+            }
+          }
+
+          .price {
+            p {
+              font-size: 32px;
+              font-family: "Jaini";
+              margin: 50px 0;
+            }
+          }
+        }
+
+        .addToCart {
+          button {
+            border: 1px solid #ffffff;
+            border-radius: 7px;
+            background-color: #924600;
+            color: #ffffff;
+            font-size: 20px;
+            font-family: "Jacques Francois";
+            padding: 10px 30px;
+            margin: 7em 1em 0 0;
+            min-height: fit-content;
+            width: fit-content;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .productStage {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1220px) {
+  .productStage {
+    .innerStructure {
+      .productImg {
+        img {
+          margin: 2em 0;
+          width: 200px;
+        }
+      }
+
+      .productShopDetails {
+        .productName {
+          margin: 40px 2em 0 2em;
+          h2 {
+            font-size: 34px;
+          }
+        }
+
+        .productDescription {
+          margin: 20px 0 0 0;
+          h4 {
+            font-size: 20px;
+          }
+        }
+
+        .productFunctions {
+          .priceAndQuatity {
+            .quatity {
+              margin: 0 0 0 0;
+              p {
+                font-size: 20px;
+                font-family: "Jacques Francois";
+                margin: 10px 0.5em 10px 0.5rem;
+              }
+            }
+
+            .price {
+              p {
+                font-size: 32px;
+                font-family: "Jaini";
+                margin: 40px 0;
+              }
+            }
+          }
+
+          .addToCart {
+            button {
+              font-size: 18px;
+              font-family: "Jacques Francois";
+              padding: 10px 30px;
+              margin: 5em 1em 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .productStage {
+    .innerStructure {
+      .productImg {
+        img {
+          margin: 2em 0;
+          width: 200px;
+        }
+      }
+
+      .productShopDetails {
+        .productName {
+          margin: 40px 2em 0 2em;
+          h2 {
+            font-size: 30px;
+          }
+        }
+
+        .productDescription {
+          margin: 20px 0 0 0;
+          h4 {
+            font-size: 16px;
+          }
+        }
+
+        .productFunctions {
+          .priceAndQuatity {
+            margin: 20px 0 0 0;
+            .quatity {
+              margin: 10px 0 0 0;
+              p {
+                font-size: 15px;
+                font-family: "Jacques Francois";
+                margin: 10px 1em 10px 0;
+              }
+
+              input {
+                height: 15px;
+                margin: 10px 0;
+                width: 30px;
+              }
+            }
+
+            .price {
+              p {
+                font-size: 28px;
+                margin: 30px 0;
+              }
+            }
+          }
+
+          .addToCart {
+            button {
+              font-size: 15px;
+              margin: 7em 1em 0 0;
+              padding: 5px 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .productStage {
+    .innerStructure {
+      position: relative;
+      .productImg {
+        img {
+          margin: 2em 0;
+          width: 150px;
+        }
+      }
+
+      .productShopDetails {
+        .productName {
+          margin: 50px 2em 0 2em;
+          h2 {
+            font-size: 24px;
+          }
+        }
+
+        .productDescription {
+          margin: 10px 0 0 0;
+          h4 {
+            font-size: 14px;
+            width: 95%;
+          }
+        }
+
+        .productFunctions {
+          .priceAndQuatity {
+            margin: 0 0 0 0;
+            width: 50%;
+
+            .quatity {
+              margin: 5px 0 0 0;
+              p {
+                font-size: 13px;
+                font-family: "Jacques Francois";
+                margin: 10px 1em 10px 0;
+              }
+
+              input {
+                height: 10px;
+                margin: 10px 0;
+                width: 20px;
+              }
+            }
+
+            .price {
+              text-align: left;
+              p {
+                font-size: 20px;
+                margin: 30px 0;
+              }
+            }
+          }
+
+          .addToCart {
+            button {
+              font-size: 10px;
+              margin: 7.2em 1em 0 0;
+              padding: 5px 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .productStage {
+    width: 90%;
+    .innerStructure {
+      display: block;
+
+      .productImg {
+        width: 100%;
+        margin: 0;
+        img {
+          margin: 2em 0;
+          width: 150px;
+        }
+      }
+
+      .productShopDetails {
+        width: 100%;
+        .productName {
+          margin: 10px 2em 0 2em;
+          h2 {
+            font-size: 35px;
+          }
+        }
+
+        .productDescription {
+          margin: 10px 0 0 0;
+
+          h4 {
+            font-size: 18px;
+            width: 95%;
+          }
+        }
+
+        .productFunctions {
+          .priceAndQuatity {
+            width: 50%;
+            margin: 0 0 0 1em;
+            .quatity {
+              p {
+                font-size: 20px;
+              }
+
+              input {
+                height: 20px;
+              }
+            }
+
+            .price {
+              p {
+                font-size: 25px;
+                margin: 15px 0;
+              }
+            }
+          }
+          .addToCart {
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            button {
+              font-size: 15px;
+              margin: auto 1em;
+              padding: 5px 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

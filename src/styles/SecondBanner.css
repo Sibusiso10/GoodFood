@@ -1,0 +1,159 @@
+.centerBanner {
+  display: flex;
+  justify-content: center;
+  margin: 10em 0;
+  width: 100%;
+}
+
+.banner {
+  position: relative;
+  width: 1440px;
+
+  .content {
+    top: 100px;
+    text-align: center;
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+
+    h3 {
+      font-size: 65px;
+      font-family: "Jaini";
+    }
+  }
+
+  .bannerImg {
+    text-align: center;
+
+    .imgCover {
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      height: 450px;
+      width: 100%;
+    }
+    img {
+      box-shadow: 0 0 50px rgba(146, 70, 0, 0.4);
+    }
+  }
+}
+
+@media only screen and (max-width: 1395px) {
+  .banner {
+    width: 100%;
+
+    .content {
+      top: 90px;
+      h3 {
+        font-size: 62px;
+      }
+    }
+    .bannerImg {
+      .imgCover {
+        height: 430px;
+      }
+      img {
+        width: 1000px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .centerBanner {
+    margin: 5em 0;
+  }
+  .banner {
+    .content {
+      top: 60px;
+      h3 {
+        font-size: 50px;
+      }
+    }
+
+    .bannerImg {
+      .imgCover {
+        height: 355px;
+      }
+      img {
+        width: 850px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .banner {
+    .content {
+      top: 60px;
+      h3 {
+        font-size: 40px;
+      }
+    }
+
+    .bannerImg {
+      .imgCover {
+        height: 345px;
+      }
+      img {
+        width: 690px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .banner {
+    .content {
+      top: 45px;
+      h3 {
+        font-size: 35px;
+      }
+    }
+    .bannerImg {
+      .imgCover {
+        height: 240px;
+      }
+      img {
+        width: 550px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .banner {
+    .content {
+      top: 45px;
+      h3 {
+        font-size: 24px;
+      }
+    }
+    .bannerImg {
+      .imgCover {
+        height: 240px;
+      }
+      img {
+        width: 420px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .banner {
+    .content {
+      top: 20px;
+      h3 {
+        font-size: 22px;
+      }
+    }
+    .bannerImg {
+      .imgCover {
+        height: 240px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
