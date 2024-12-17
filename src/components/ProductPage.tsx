@@ -2,7 +2,9 @@ import "../styles/ProductPage.css";
 import Product from "./Product";
 import FoodItems from "./FoodItems";
 import NavBar from "./NavBar";
-import RelatedItems from "./RelatedItems";
+{
+  /*import RelatedItems from "./RelatedItems";*/
+}
 
 interface ProductProps {
   mealMenuList: FoodItems[];
@@ -17,10 +19,10 @@ const ProductPage: React.FC<ProductProps> = ({
   dessertItems,
   id,
   type,
-  handleSetVariables,
 }) => {
   return (
     <>
+      {/* handleSetVariables,*/}
       <NavBar />
       <div className="centerProductPage">
         <div className="productPage">
