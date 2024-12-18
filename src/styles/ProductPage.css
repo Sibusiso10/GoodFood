@@ -13,3 +13,12 @@
   justify-content: center;
   width: inherit;
 }
+
+@media only screen and (max-width: 1440px) {
+  .productPage {
+    width: 100%;
+  }
+  .theProduct {
+    width: 100%;
+  }
+}
