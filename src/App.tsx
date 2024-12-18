@@ -163,7 +163,7 @@ function App() {
             <HomePage
               mealMenuList={mealMenuList}
               dessertItems={dessertItems}
-              setVariables={setVariables}
+              handleSetVariables={handleSetVariables}
             />
           }
         />

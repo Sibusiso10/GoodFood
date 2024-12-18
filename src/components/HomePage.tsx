@@ -10,21 +10,27 @@ import FoodItems from "./FoodItems";
 interface Menus {
   mealMenuList: FoodItems[];
   dessertItems: FoodItems[];
-  setVariables: (tempId: number, tempType: string) => void;
+  handleSetVariables: (tempId: number, tempType: string) => void;
 }
 
 const HomePage: React.FC<Menus> = ({
   mealMenuList,
   dessertItems,
-  setVariables,
+  handleSetVariables,
 }) => {
   return (
     <>
       <NavBar />
       <HeroSection />
-      <MealMenu mealMenuList={mealMenuList} setVariables={setVariables} />
+      <MealMenu
+        mealMenuList={mealMenuList}
+        handleSetVariables={handleSetVariables}
+      />
       <SecondBanner />
-      <SnackMenu snackMenuList={dessertItems} setVariables={setVariables} />
+      <SnackMenu
+        snackMenuList={dessertItems}
+        handleSetVariables={handleSetVariables}
+      />
     </>
   );
 };

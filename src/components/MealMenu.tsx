@@ -25,9 +25,9 @@ const productImages: { [key: string]: string } = {
 
 interface mealMenu {
   mealMenuList: FoodItems[];
-  setVariables: (tempId: number, tempType: string) => void;
+  handleSetVariables: (tempId: number, tempType: string) => void;
 }
-const MealMenu: React.FC<mealMenu> = ({ mealMenuList, setVariables }) => {
+const MealMenu: React.FC<mealMenu> = ({ mealMenuList, handleSetVariables }) => {
   return (
     <div className="centerMealMenu">
       <div className="mealMenu">
@@ -41,7 +41,7 @@ const MealMenu: React.FC<mealMenu> = ({ mealMenuList, setVariables }) => {
                 className="outerCover"
                 key={i.productId}
                 onClick={() => {
-                  setVariables(i.productId, i.productType);
+                  handleSetVariables(i.productId, i.productType);
                 }}
               >
                 <div className="productImg">

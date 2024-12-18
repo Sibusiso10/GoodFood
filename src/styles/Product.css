@@ -1,7 +1,7 @@
 .productStage {
   display: flex;
   justify-content: center;
-  margin: 3.1em 0 0 0;
+  margin: 3em 0 0 0;
   width: 1440px;
 
   .innerStructure {
@@ -308,6 +308,7 @@
 
 @media only screen and (max-width: 470px) {
   .productStage {
+    margin: 1em 0 0 0;
     width: 90%;
     .innerStructure {
       display: block;

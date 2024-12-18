@@ -171,6 +171,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .centerSingIn {
+    margin-top: 4em;
+  }
   .singIn {
     .signInTittle {
       font-size: 40px;
