@@ -4,7 +4,6 @@ import CartObjects from "./CartObjects";
 import NavBar from "./NavBar";
 import ProductInCart from "./ProductInCart";
 import FoodItems from "./FoodItems";
-import Items from "./Items";
 import { useEffect, useState } from "react";
 
 interface CartProps {
