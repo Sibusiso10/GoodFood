@@ -5,12 +5,14 @@ import LogIN from "./components/LogIN";
 import SignIn from "./components/SignIn";
 import { useState, useEffect } from "react";
 import ProductPage from "./components/ProductPage";
+import Cart from "./components/Cart";
+import CartObjects from "./components/CartObjects";
 
 const mealMenuList = [
   {
     productId: 1,
     productName: "Sweet & Spicy Beef Teriyaki Noodles",
-    productPrice: 20.79,
+    productPrice: 120.79,
     productDescription:
       "A delightful mix of sweet and spicy flavors with tender beef and noodles. Perfect for a quick and satisfying meal.",
     productType: "meal",
@@ -75,7 +77,7 @@ const mealMenuList = [
 ];
 const dessertItems = [
   {
-    productId: 1,
+    productId: 121,
     productName: "Milkshake",
     productPrice: 42.99,
     productDescription:
@@ -83,7 +85,7 @@ const dessertItems = [
     productType: "snack",
   },
   {
-    productId: 2,
+    productId: 122,
     productName: "Sundae",
     productPrice: 12.99,
     productDescription:
@@ -91,7 +93,7 @@ const dessertItems = [
     productType: "snack",
   },
   {
-    productId: 3,
+    productId: 123,
     productName: "Popsicles",
     productPrice: 15.99,
     productDescription:
@@ -99,7 +101,7 @@ const dessertItems = [
     productType: "snack",
   },
   {
-    productId: 4,
+    productId: 124,
     productName: "Cake",
     productPrice: 20.99,
     productDescription:
@@ -107,7 +109,7 @@ const dessertItems = [
     productType: "snack",
   },
   {
-    productId: 5,
+    productId: 125,
     productName: "Fries",
     productPrice: 30.99,
     productDescription:
@@ -115,7 +117,7 @@ const dessertItems = [
     productType: "snack",
   },
   {
-    productId: 6,
+    productId: 126,
     productName: "Cake Slice",
     productPrice: 25.99,
     productDescription:
@@ -123,7 +125,7 @@ const dessertItems = [
     productType: "snack",
   },
   {
-    productId: 7,
+    productId: 127,
     productName: "Parfait",
     productPrice: 10.99,
     productDescription:
@@ -134,6 +136,8 @@ const dessertItems = [
 function App() {
   const [id, setId] = useState(0);
   const [type, setType] = useState("");
+  const [items, setItem] = useState<CartObjects[]>([]);
+  const [numOfItemsInCart, setNumOfItemsInCart] = useState(0);
 
   useEffect(() => {
     const savedId = localStorage.getItem("id");
@@ -146,12 +150,45 @@ function App() {
     setId(tempId);
     setType(tempType);
   };
+
+  const handleDeleteItem = (id: number, type: string) => {
+    const updatedItems = items.filter((i) => !(i.id === id && i.type === type));
+    setItem(updatedItems);
+    decrement();
+  };
+
   const handleSetVariables = (tempId: number, tempType: string) => {
     setId(tempId);
     setType(tempType);
     localStorage.setItem("id", String(tempId));
     localStorage.setItem("type", tempType);
     setVariables(tempId, tempType);
+  };
+
+  const increment = () => {
+    setNumOfItemsInCart(numOfItemsInCart + 1);
+  };
+
+  const decrement = () => {
+    setNumOfItemsInCart(numOfItemsInCart - 1);
+  };
+  const addNewProduct = (id: number, quantity: number, type: string) => {
+    // Check if the item exists in the cart
+    const existingItem = items.find((i) => i.id === id && i.type === type);
+    if (existingItem) {
+      // If the item exists, update its quantity
+      const updatedItems = items.map((i) =>
+        i.id === id && i.type === type
+          ? { ...i, quantity: i.quantity + quantity }
+          : i
+      );
+      setItem(updatedItems);
+    } else {
+      // If the item does not exist, add it to the cart
+      const newProduct: CartObjects = { id, quantity, type };
+      setItem([...items, newProduct]);
+      increment();
+    }
   };
 
   return (
@@ -164,6 +201,7 @@ function App() {
               mealMenuList={mealMenuList}
               dessertItems={dessertItems}
               handleSetVariables={handleSetVariables}
+              numOfItemsInCart={numOfItemsInCart}
             />
           }
         />
@@ -178,6 +216,20 @@ function App() {
               id={id}
               type={type}
               handleSetVariables={handleSetVariables}
+              addNewProduct={addNewProduct}
+              numOfItemsInCart={numOfItemsInCart}
+            />
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <Cart
+              productsInCart={items}
+              numOfItemsInCart={numOfItemsInCart}
+              mealMenuList={mealMenuList}
+              snackMenuList={dessertItems}
+              handleDeleteItem={handleDeleteItem}
             />
           }
         />

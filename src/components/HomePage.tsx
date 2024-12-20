@@ -11,16 +11,18 @@ interface Menus {
   mealMenuList: FoodItems[];
   dessertItems: FoodItems[];
   handleSetVariables: (tempId: number, tempType: string) => void;
+  numOfItemsInCart: number;
 }
 
 const HomePage: React.FC<Menus> = ({
   mealMenuList,
   dessertItems,
   handleSetVariables,
+  numOfItemsInCart,
 }) => {
   return (
     <>
-      <NavBar />
+      <NavBar numOfItemsInCart={numOfItemsInCart} />
       <HeroSection />
       <MealMenu
         mealMenuList={mealMenuList}

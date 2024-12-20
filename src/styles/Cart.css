@@ -1,0 +1,393 @@
+.centerTittle {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .cartTittle {
+    margin: 30px 0 15px 0;
+    width: 1400px;
+
+    h2 {
+      font-size: 50px;
+      font-family: "Javanese Text";
+      font-weight: 300;
+      text-decoration: underline;
+      margin: 0%;
+    }
+  }
+}
+.centerProductsInCart {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .ProductInCart {
+    border: 1px solid #924600;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 65px #92470062;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    margin: 0;
+    height: 58vh;
+    width: 1400px;
+    .cartProductContainer {
+      border: 1px solid white;
+      background-color: rgba(82, 34, 8, 0.8);
+      justify-content: space-between;
+      display: flex;
+      margin: 20px 10px;
+      position: relative;
+      .container {
+        display: flex;
+        width: 100%;
+      }
+      .imgOfProduct {
+        margin: 10px;
+        height: fit-content;
+        text-align: center;
+        width: 25%;
+        img {
+          border: 2px solid black;
+          display: block;
+          object-fit: contain;
+          margin: auto;
+          width: 120px;
+        }
+      }
+
+      .productName {
+        width: 50%;
+        margin: auto;
+        p {
+          text-align: center;
+          font-size: 28px;
+          font-family: "Jacques Francois";
+          margin: 0;
+        }
+      }
+
+      .deleteAndinformation {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 0 10px;
+        position: relative;
+        width: 25%;
+        .delete {
+          color: black;
+          text-align: right;
+          display: block;
+          margin: 10px 0;
+          width: 97%;
+          img {
+            width: 30px;
+          }
+        }
+        .quanity {
+          p {
+            font-size: 30px;
+            font-family: "Josefin Slab";
+            margin-right: 10px;
+            text-align: right;
+            margin: 30px 20px 30px 0;
+          }
+        }
+        .price {
+          display: flex;
+          justify-content: right;
+          text-align: right;
+          margin-top: 8px;
+          p {
+            border-top: 1px solid white;
+            border-left: 1px solid white;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-size: 40px;
+            font-family: "Josefin Slab";
+            padding: 5px 20px;
+            margin: 0;
+            width: fit-content;
+          }
+        }
+      }
+    }
+  }
+}
+
+.centerTotalAndOrder {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .totalAndOrder {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 1340px;
+    .total {
+      margin: auto 0;
+      p {
+        font-size: 40px;
+        font-family: "Josefin Slab";
+        font-weight: 300;
+        margin: 0%;
+      }
+    }
+    .btnFororder {
+      display: block;
+      button {
+        border: 1px solid white;
+        background-color: rgba(123, 44, 0, 0.6);
+        color: white;
+        display: block;
+        font-size: 20px;
+        font-family: "Jacques Francois";
+        padding: 10px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .centerTittle {
+    .cartTittle {
+      width: 96%;
+    }
+  }
+
+  .centerProductsInCart {
+    .ProductInCart {
+      width: 96%;
+    }
+  }
+
+  .centerTotalAndOrder {
+    .totalAndOrder {
+      width: 95%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  .centerTittle {
+    .cartTittle {
+      margin: 25px 0 10px 0;
+      h2 {
+        font-size: 45px;
+      }
+    }
+  }
+
+  .centerProductsInCart {
+    .ProductInCart {
+      .cartProductContainer {
+        margin: 15px 10px;
+
+        .imgOfProduct {
+          img {
+            width: 100px;
+          }
+        }
+
+        .productName {
+          p {
+            font-size: 20px;
+          }
+        }
+
+        .deleteAndinformation {
+          .delete {
+            margin: 10px 0;
+            width: 97%;
+            img {
+              width: 28px;
+            }
+          }
+          .quanity {
+            p {
+              font-size: 24px;
+              margin: 30px 20px 30px 0;
+            }
+          }
+          .price {
+            p {
+              font-size: 30px;
+              padding: 5px 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .centerTotalAndOrder {
+    .totalAndOrder {
+      .total {
+        p {
+          font-size: 35px;
+        }
+      }
+      .btnFororder {
+        button {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .centerTittle {
+    .cartTittle {
+      margin: 10px 0 10px 0;
+      h2 {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .centerProductsInCart {
+    .ProductInCart {
+      .cartProductContainer {
+        margin: 15px 10px;
+
+        .imgOfProduct {
+          img {
+            width: 80px;
+          }
+        }
+
+        .productName {
+          p {
+            font-size: 13px;
+          }
+        }
+
+        .deleteAndinformation {
+          .delete {
+            margin: 10px 0;
+            width: 93%;
+            img {
+              width: 25px;
+            }
+          }
+          .quanity {
+            p {
+              font-size: 20px;
+              margin: 20px 20px 15.8px 0;
+            }
+          }
+          .price {
+            p {
+              font-size: 20px;
+              padding: 5px 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .centerTotalAndOrder {
+    .totalAndOrder {
+      .total {
+        p {
+          font-size: 30px;
+        }
+      }
+      .btnFororder {
+        button {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .centerTittle {
+    .cartTittle {
+      margin: 10px 0 10px 0;
+      h2 {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .centerProductsInCart {
+    .ProductInCart {
+      .cartProductContainer {
+        margin: 10px 10px;
+
+        .imgOfProduct {
+          img {
+            width: 60px;
+          }
+        }
+
+        .productName {
+          p {
+            font-size: 10px;
+          }
+        }
+
+        .deleteAndinformation {
+          .delete {
+            img {
+              width: 15px;
+            }
+          }
+          .quanity {
+            p {
+              font-size: 13px;
+              margin: 18px 10px 12px 0;
+            }
+          }
+          .price {
+            p {
+              font-size: 13px;
+              padding: 5px 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .centerTotalAndOrder {
+    .totalAndOrder {
+      .total {
+        p {
+          font-size: 25px;
+        }
+      }
+      .btnFororder {
+        button {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 370px) {
+  .centerProductsInCart {
+    .ProductInCart {
+      .cartProductContainer {
+        .productName {
+          p {
+            font-size: 9px;
+          }
+        }
+
+        .deleteAndinformation {
+          .price {
+            p {
+              font-size: 13px;
+              padding: 5px 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

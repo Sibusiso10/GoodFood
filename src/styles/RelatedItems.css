@@ -1,11 +1,14 @@
 .relatedProductittle {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   h4 {
     font-size: 50px;
     font-family: "Jacques Francois";
     font-weight: 100;
     text-decoration: underline;
-    margin: 1.5em 1em;
-    width: 100%;
+    margin: 0;
+    width: fit-content;
   }
 }
 .relatedItemContainer {
@@ -49,8 +52,7 @@
 
 @media only screen and (max-width: 1440px) {
   .relatedProductittle {
-    width: 100%;
-    background-color: orange;
+    margin: 50px auto;
     h4 {
       font-size: 50px;
     }
@@ -58,5 +60,93 @@
 
   .relatedProductList {
     width: 95%;
+  }
+}
+
+@media only screen and (max-width: 1220px) {
+  .relatedProductittle {
+    h4 {
+      font-size: 45px;
+    }
+  }
+
+  .relatedProductList {
+    .outerCover {
+      width: 230px;
+      margin: 1.2em;
+
+      .productImg {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 230px;
+        }
+      }
+      .productName p {
+        font-size: 14px;
+      }
+      .productPrice p {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .relatedProductittle {
+    h4 {
+      font-size: 40px;
+    }
+  }
+
+  .relatedProductList {
+    .outerCover {
+      width: 200px;
+
+      .productImg {
+        img {
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 970px) {
+  .relatedProductittle {
+    h4 {
+      font-size: 32px;
+    }
+  }
+
+  .relatedProductList {
+    .outerCover {
+      width: 180px;
+
+      .productImg {
+        img {
+          width: 180px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .relatedProductittle {
+    h4 {
+      font-size: 25px;
+    }
+  }
+
+  .relatedProductList {
+    .outerCover {
+      width: 150px;
+
+      .productImg {
+        img {
+          width: 150px;
+        }
+      }
+    }
   }
 }

@@ -15,6 +15,7 @@ import beefShortRibsMashedPotatoes from "../assets/images/mealMenuImages/Beef Sh
 import grilledSalmonBroccoliRice from "../assets/images/mealMenuImages/Grilled Salmon with Broccoli and Rice.png";
 import FoodItems from "./FoodItems";
 import "../styles/Product.css";
+import { useState } from "react";
 
 const theProductImage: { [key: string]: string } = {
   "Sweet & Spicy Beef Teriyaki Noodles": sweetSpicyBeefTeriyakiNoodles,
@@ -37,8 +38,31 @@ const theProductImage: { [key: string]: string } = {
 interface TheProductProps {
   product: FoodItems[];
   id: number;
+  addNewProduct: (id: number, quantity: number, type: string) => void;
 }
-const TheProduct: React.FC<TheProductProps> = ({ product, id }) => {
+const TheProduct: React.FC<TheProductProps> = ({
+  product,
+  id,
+  addNewProduct,
+}) => {
+  const [inputValue, setInputValue] = useState<string>("1"); // Handler function to update the state when input changes
+  const [numberValue, setNumberValue] = useState<number>(1);
+  const [inputValid, setInputValid] = useState<boolean>(true);
+  // Handler function to update the state when input changes
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    setInputValue(value);
+
+    // Convert the input value to a number
+    const num = Number(value);
+    if (isNaN(num) || num <= 0) {
+      setNumberValue(1);
+      setInputValid(false);
+    } else {
+      setNumberValue(num);
+      setInputValid(true);
+    }
+  };
   return (
     <>
       {product
@@ -61,8 +85,21 @@ const TheProduct: React.FC<TheProductProps> = ({ product, id }) => {
               <div className="productFunctions">
                 <div className="priceAndQuatity">
                   <div className="quatity">
-                    <p>Quatity:</p>
-                    <input type="text" />
+                    <div className="setQuantity">
+                      <p>Quatity:</p>
+                      <input
+                        type="text"
+                        value={inputValue}
+                        onChange={handleInputChange}
+                      />
+                    </div>
+                    <div className="errorWarning">
+                      {!inputValid && (
+                        <p className="validInputError">
+                          Enter a number, Invalid input
+                        </p>
+                      )}
+                    </div>
                   </div>
 
                   <div className="price">
@@ -70,7 +107,15 @@ const TheProduct: React.FC<TheProductProps> = ({ product, id }) => {
                   </div>
                 </div>
                 <div className="addToCart">
-                  <button>Add To Cart</button>
+                  <button
+                    onClick={() => {
+                      if (inputValid && numberValue !== null) {
+                        addNewProduct(i.productId, numberValue, i.productType);
+                      }
+                    }}
+                  >
+                    Add To Cart
+                  </button>
                 </div>
               </div>
             </div>

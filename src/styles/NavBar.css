@@ -40,7 +40,7 @@
 
 .counter {
   margin: -2px auto;
-  min-height: 5px;
+  min-height: 10px;
 }
 
 .counter span {
